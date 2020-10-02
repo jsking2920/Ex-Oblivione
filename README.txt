@@ -12,6 +12,12 @@ pathfinding algorithms, five unique spells, and a text based interface reminisce
 of many old-school roguelikes.
 
 
+Notice:
+This is the version of the project that I have worked on since submitting it as a term project
+and is NOT what I submitted for a grade. Very little has changed (so far) but if I continue to 
+add to the game in the future, it will be on this branch.
+
+
 How to run Ex Oblivione:
 Run the file named "main.py" in an editor with python-tcod installed to play the game.
 
