@@ -1,0 +1,51 @@
+From: https://www.reddit.com/r/roguelikedev/comments/a81isq/whats_the_story_with_tcodpy_tcod_tcod_and/
+and http://www.roguebasin.com/index.php?title=Doryen
+Tcod is a C library originally developed for the roguelike "The Chronicles of Doryen" (TCoD) by a developer known as Jice. 
+Python-tcod is the most recent python port of tcod that is actively maintened by Kyle Stewart (HexDecimal).
+
+python-tcod hosted at: https://github.com/tcod/python-tcod/graphs/contributors
+
+From: https://github.com/tcod/tcod
+Tcod is a free, fast, portable and uncomplicated API for roguelike developers 
+providing an advanced true color console, input, and lots of other utilities frequently used in roguelikes.
+
+installation directions: https://python-tcod.readthedocs.io/en/latest/installation.html
+
+I will be using some pieces of code and some parts of the general structure, as well as the font from the python-tcod
+roguelike tutorial made by TStand90 available at: http://rogueliketutorials.com/
+
+Some information, research, and resources:
+https://python-tcod.readthedocs.io/en/latest/index.html
+https://www.reddit.com/r/gamedev/wiki/resources
+http://www.roguebasin.com/index.php?title=Main_Page
+http://www.roguebasin.com/index.php?title=Complete_Roguelike_Tutorial,_using_Python3%2Blibtcod,_extras#BSP_Dungeon_Generator
+https://github.com/mbrukman/awesome-gamedev
+https://coolors.co/
+http://roguebasin.roguelikedevelopment.org/index.php?title=Roguelike_Dev_FAQ
+https://www.gridsagegames.com/blog/
+https://www.reddit.com/r/roguelikedev/
+http://www.cs.cmu.edu/~112/index.html
+https://wiki.libsdl.org/SDL_Keycode
+https://www.youtube.com/watch?v=rVBDywOmX8Y
+http://roguecentral.org/doryen/data/libtcod/doc/1.5.1/html2/console_set_custom_font.html?c=false&cpp=false&cs=false&py=true&lua=false
+https://en.wikipedia.org/wiki/Markov_chain
+https://eskerda.com/bsp-dungeon-generation/
+https://trlewis.net/generating-a-dungeon-part-1/
+https://www.wi.uni-muenster.de/sites/wi/files/users/mpreu_02/games-material/ba-vm-ss2015/marco_niemann_-_constructive_generation_methods_for_dungeons_-_thesis.pdf
+https://www.growingwiththeweb.com/2012/06/a-pathfinding-algorithm.html
+https://blog.jrheard.com/procedural-dungeon-generation-drunkards-walk-in-clojurescript
+https://www.youtube.com/watch?v=ySN5Wnu88nE
+https://www.redblobgames.com/pathfinding/a-star/introduction.html
+
+
+Thank you to all those who have helped to develop and maintain libtcod through the years, and all the people 
+behind the other resources listed.
+
+I will be using some pieces of code and some parts of the general structure from the python-tcod
+roguelike tutorial made by TStand90 available at: http://rogueliketutorials.com/
+
+The font used in Ex Oblivione is available at http://rogueliketutorials.com/tutorials/tcod/part-0/ 
+and https://raw.githubusercontent.com/TStand90/roguelike_tutorial_revised/master/arial10x10.png
+
+The name Ex Oblivione is the title of a poem by H.P. Lovecraft 
+Ex Oblivione by Lovecraft: http://www.hplovecraft.com/writings/texts/fiction/eo.aspx

@@ -1,0 +1,107 @@
+Scott King
+(jsking)
+4/9/20
+
+Project Proposal for Ex Oblivione
+------------------------------------------------------------------------------------------------------------------
+
+Description
+Ex Oblivione will be game in the roguelike genre. It will feature a player moving through 
+procedurally generated floors created using several different algorithms. It will also feature 
+combat and a field-of-view algorithm. Names and a puzzle will also be procedurally generated
+using an algorithm that uses Markov chains.
+
+
+Competitive Analysis 
+Ex Oblivione will join thousands of other roguelikes that have been created and posted online or put 
+in digital marketplaces over the years. One roguelike that I enjoy a lot, Brogue, is worth 
+analyzing for the purpose of comparison with Ex Oblivione. Brogue two most notable features are
+it's incredible ascii art and the fact that it can be played entirely with a mouse, which is unusual 
+for a roguelike. Ex Oblivione will also be entirely text-based because I like the aesthetic and the
+simplicity of text-based games like Brogue. I would also like to incorporate as much as mouse functionality
+as possible because using a mouse is often more intuitive for a user, which makes it much easier to
+learn. Ex Oblivione will obviously be much more limited in scope than Brogue due to the time constraints
+it is being created under, but I also would like to keep it intentionally simpler to make it more 
+accessible than something like Brogue
+
+Another very good and well known roguelike that is worth looking at is Dungeon Crawl Stone Soup. DCSS 
+is an extremely deep and expansive game that has a wide variety of enemies, items, and floors. 
+Most relavent to the development of my game is how it makes different kinds of floors feel and play
+differently from the users prospective. All of the floors, or at least almost all the floors, are
+generated randomly every game and based on the kind of floor a different algorithm is used. Ex Oblivione
+will work similarly by using different kinds of algorithms to create variety for the player. Similarly
+to Brogue, DCSS is extremely dense and obtuse, which is something I'd like to avoid.
+
+
+Structural Plan
+I will be seperating my code into seperate files and folders to keep things as organized and as modular
+as possible. This will help imensly with debugging, and it will make it easy to plug in different algorithms
+if I want to try something different for any given part of the game. The main game loop will be kept in
+a file with no other classes or funtions, and it will be the file that needs to be run in order to play
+the game. All of the functions that need to run in order to initialize a new game will be kept in their 
+own seperate file. All the functions and classes for generating maps will be kept in an appropriately 
+named sub-directory. All the funtions for rendering the game will be kept in a single file, and they will
+kept as simple and compact as possible in order to keep the main game loop tidy. All entities in the game,
+the player, enemies, NPC's, and items, will be instances of the class Entity, which will help keep rendering
+simple.
+
+
+Algorithmic Plan
+One of the several algorithms I will be using to generate floors is called a Binary Space Partioning algorithm,
+or BSP for short. BSP works by taking a rectangular space and dividing it randomly into two rectangles. Then
+those two rectangles, or containers, are recursively split randomly again. This is done a desired number of times
+using a recursive implementation that keeps track of depth. Then, once the containers have all been created, 
+rooms are created within them using a randomized amount of padding. Corridors are created from the center of each 
+container to it's brother so that all the rooms are connected. Then the player is placed at random in a room and a
+staircase is created to the next floor. The random nature of the creation of each container means that sometimes 
+maps that are unplayable or at least unpleasent will be created. To prevent this, each time a container is split
+the new containers will be checked against a given minimum and maximum width to height ratio to make sure they aren't 
+too skinny. If they are, the algorithm redoes the split by calling the function again without reducing the depth value.
+In order to prevent recursing too much, the allowed width to height ratios are also widened. This means that later 
+partitions will be more random, while the earlier, larger partitions will be closer to even. One advantage of this 
+algorithm is that it has several parameters that can be tweaked to get different results. The depth parameter can be
+increased to split the space up more times and get smaller rooms and the width to height ratios can be raised or 
+lowered to allow for more or less variance from room to room. The padding that is used to create each room can also 
+be set to an exact value to have more consistency, or it can be removed altogether to make a map that has rooms 
+that are right up against eachother. To add another element of randomness to the algorithm, I created a few presets of 
+parameters that made unique and workable maps and had it pick at random between them. This essentially means that
+one algorithm can be used to make several different kinds of maps. Three other algorithms will also be used to 
+generate maps, a very basic dungeon generation algorithm, cellular automata, and a random walk algorithm.
+
+
+Timeline Plan
+Before next cp
+- combat and items
+- Field of View algorithm
+- a menu and a win state
+- message box
+Before TP2
+- Cellular Automata Algorithm
+- Random Walk Algorithm
+- Markov Chain Algorithm/Puzzle
+After MVP
+- More dungeon gen algorithms
+- Mouse functionality
+- More enemies
+- Stealth elements
+- More Puzzles
+- Fonts
+- Tiles
+- NPCs/thematic material
+- Shops/items
+- saving functionality using JSON
+- Git integration
+- create an easily distributed executable
+- Music
+- timed events
+- different character options and endings
+
+
+Version Control
+I am using my google drive to back up my project every time I implement any major changes to my code.
+
+
+Module List
+python-tcod/libtcod is the only external module that I am using for my project.
+
+

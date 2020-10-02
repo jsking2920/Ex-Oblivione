@@ -1,0 +1,6 @@
+TP3 Update
+
+Some changes were made to the design of the game since TP2. For one, the last algorithm for 
+dungeon generation was cut due to a lack of time. Several of the extra features I considered working
+on after MVP did not make it either for the same reason, but several spells were added to give
+the player more interesting options. 

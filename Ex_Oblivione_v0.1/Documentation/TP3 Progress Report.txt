@@ -1,0 +1,82 @@
+TP3 Progress Report
+
+-added necessary docs for tp3
+-added a new console for drawing UI elements
+-implemented a fuction for drawing bars for things like hp
+-implemented a message log and integrated it into my game
+-made sure that everything prints to message log instead of terminal
+-added a start up message
+-moved some things from main file into the initialize_new_game file
+
+
+-implemented a fireball spell for attacking multiple enemies in a radius around the player
+-implemented mp for the player to limit how much they can cast fireball
+-implemented health and mp regeneration every turn
+-rebalanced player and monster stats
+-made hp and mp regen slower and made methods for regen
+-made it so that health/mp regen only starts ticking once a player loses hp or mp which saves unneccasary work and prevents a player from healing right after taking damage for the first time
+-made it so casting a spell resets mp_regen_tick meaning that a player must wait the delay after casting a spell to start regaining mp
+-added a message that tells player how much mp they need to cast a spell if they try to cast a spell with too little mp
+-made spell input/handeling more general to facilitate the addition of more spells
+-added a cure spell that heals for a proportion of the players max_hp
+-added a spell that can tunnel through walls with arrow keys
+-fixed fov bugs with tunneling spell added check to make sure player doesn't go out of bounds
+-added a spell called clairvoyance that reveals position of stairs
+-made it so the radius a player can see is stored within the player entity, not in the constants dictionary to facilitate flash spell
+-added a flash spell that increases the players fov radius for one turn
+-implemented random movement for enemies outside of the players fov
+-made it so that once an enemy has seen a player they will follow them even if they are outside of the player's fov
+-changed tunneling spell so that it can clear multiple tiles in a line
+-cleaned up comments on all files and checked citations/fixed minor style things/made restart r+shift to avoid misclicks
+-slight balance tweaks/changed message at start of the game
+-finished docs for tp3
+
+
+ideas/to do
+----------------------------
+a star alg
+move restart into a pause menu
+tweak monster/stairs placement alg
+change stair placement to be far away from player/make it so stairs arent in hallways
+make it so stairs make sense, can be gone back up
+add names/identification for enemies/change characters/colors/make them random/random chance of different kinds
+cellular automata
+add parameters to affect the way random walk works
+all functions that use map_width should just use self.width and similar
+fix all of the super long lines with function arguments/use more helper functions
+render order
+ability to mouse over things to inspect/draws a path with highlighting (djikstras)
+mouse functionality
+better pathfinding with smoother movement/no weird diagonal moves/hueristics
+traps
+items
+remove dead entities from list of entities
+add exp/leveling system
+more detailed UI
+better win/lose/start screen
+music
+visual effects for spells
+add random chance for enemy to spawn when tunneling
+change instructions at start/move to README
+real-time mode?
+drugs/addicition/opium/insanity
+mellange that gives you access to magic/Dune RL?
+desert navigation/water management
+necromancy
+
+enemies can blind you for a period of time
+add a tick on players turn for things that last more than one turn
+poisen enemies
+
+rescan notebook
+add time sheets to digital docs
+
+add in tcods pathfinding
+smooth somethings out/refine
+
+outstanding bugs
+------------------
+occaisional bsp infinite loop crash
+player spawning on edge of the map for random walk alg because it can randomly select the edges
+weird pathfinding
+flash can stack

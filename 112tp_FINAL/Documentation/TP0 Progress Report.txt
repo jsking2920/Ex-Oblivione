@@ -1,8 +1,0 @@
-TP0 Progress Report
-
--replaced all depreciated functions and successfully got rid of depreciation warnings
--reworked input handling
--fixed bug causing window to crash instead of closing cleanly
--figured out what the game is actually going to be gamplay wise and thematically
--started design docs
--started documentation process
