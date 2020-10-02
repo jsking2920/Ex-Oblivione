@@ -1,0 +1,4 @@
+TP2 Update
+
+The timeline for the project was rearranged slightly but not meaningfully. 
+I decided to implement my own pathfinding algorithm for enemies in place of the puzzle/markov chain feature.
